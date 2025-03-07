@@ -1,13 +1,15 @@
 <div align="center">
 
   ## 2SSP: A Two-Stage Framework for Structured Pruning of LLMs
-  
+
   [Fabrizio Sandri](https://fabriziosandri.github.io/), [Elia Cunegatti](https://eliacunegatti.github.io/), [Giovanni Iacca](https://sites.google.com/site/giovanniiacca/)
-  
-  [![arXiv](https://img.shields.io/badge/arXiv-2501.17771-b31b1b.svg)](https://arxiv.org/abs/2501.17771)
+
+*Accepted at Workshop Sparsity in LLMs (SLLM) @ ICLR 2025*
+
+  [![arXiv](https://img.shields.io/badge/arXiv-2501.17771-b31b1b.svg)](https://arxiv.org/abs/2501.17771) [![SLLM@ICLR2025](https://img.shields.io/badge/SLLM@ICLR2025-j0NRBl9vVd-blue.svg)](https://openreview.net/pdf?id=j0NRBl9vVd)
 </div>
 
-> **Abstract.** 
+> **Abstract.**
 *We propose a novel Two-Stage framework for Structured Pruning (2SSP) for pruning Large Language Models (LLMs), which combines two different strategies of pruning, namely Width and Depth Pruning. The first stage (Width Pruning) removes entire neurons, hence their corresponding rows and columns, aiming to preserve the connectivity among the pruned structures in the intermediate state of the Feed-Forward Networks in each Transformer block. This is done based on an importance score measuring the impact of each neuron over the output magnitude. The second stage (Depth Pruning), instead, removes entire Attention submodules. This is done by applying an iterative process that removes the Attention submodules with the minimum impact on a given metric of interest (in our case, perplexity). We also propose a novel mechanism to balance the sparsity rate of the two stages w.r.t. to the desired global sparsity. We test 2SSP on four LLM families and three sparsity rates (25%, 37.5%, and 50%), measuring the resulting perplexity over three language modeling datasets as well as the performance over six downstream tasks. Our method consistently outperforms five state-of-the-art competitors over three language modeling and six downstream tasks, with an up to two-order-of-magnitude gain in terms of pruning time.*
 
 ## Installation
@@ -114,12 +116,22 @@ For more details, refer to the documentation or the associated research paper.
 
 ## Citation
 If you find this work useful, please consider citing:
-```
+```bibtex
 @article{sandri20252SSP,
-      title={2SSP: A Two-Stage Framework for Structured Pruning of LLMs}, 
-      author={Fabrizio Sandri and Elia Cunegatti and Giovanni Iacca},
-      journal={arXiv preprint arXiv:2501.17771},
-      url={https://arxiv.org/abs/2501.17771},
-      year={2025}
+    title={2SSP: A Two-Stage Framework for Structured Pruning of LLMs},
+    author={Fabrizio Sandri and Elia Cunegatti and Giovanni Iacca},
+    journal={arXiv preprint arXiv:2501.17771},
+    url={https://arxiv.org/abs/2501.17771},
+    year={2025}
+}
+
+|
+
+@inproceedings{sandri2025ssp,
+    title={2{SSP}: A Two-Stage Framework for Structured Pruning of {LLM}s},
+    author={Fabrizio Sandri and Elia Cunegatti and Giovanni Iacca},
+    booktitle={Sparsity in LLMs (SLLM): Deep Dive into Mixture of Experts, Quantization, Hardware, and Inference},
+    year={2025},
+    url={https://openreview.net/forum?id=j0NRBl9vVd}
 }
 ```
